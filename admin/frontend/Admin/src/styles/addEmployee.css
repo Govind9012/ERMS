@@ -1,0 +1,157 @@
+.add-employee-page {
+  padding: 24px;
+  background: #f8fafc;
+}
+
+.add-employee-page h2 {
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.add-employee-card {
+  width: 420px;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.add-employee-card label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 12px;
+}
+
+.add-employee-card input {
+  margin-top: 4px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.add-employee-card input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.add-btn {
+  margin-top: 16px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+}
+
+.add-employee-card select {
+  margin-top: 4px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #0f172a;
+  cursor: pointer;
+  appearance: none;
+}
+
+/* Focus style (same as input) */
+.add-employee-card select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Optional: dropdown arrow */
+.add-employee-card select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2364748b' viewBox='0 0 16 16'%3E%3Cpath d='M3.204 5.5L8 10.293 12.796 5.5l.708.707L8 11.707 2.496 6.207z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 36px;
+}
+
+
+ 
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+ 
+/* Modal Box */
+.modal {
+  width: 360px;
+  background: #ffffff;
+  padding: 26px 24px;
+  border-radius: 18px;
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, 0.2);
+  text-align: center;
+}
+ 
+/* Title */
+.modal h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #020617;
+  margin-bottom: 10px;
+}
+ 
+/* Text */
+.modal p {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 22px;
+}
+ 
+/* Actions */
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+ 
+/* Buttons */
+.btn-cancel {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+ 
+.btn-cancel:hover {
+  background: #f1f5f9;
+}
+ 
+.btn-confirm {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+ 
+.btn-confirm:hover {
+  opacity: 0.95;
+}

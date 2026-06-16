@@ -1,0 +1,17 @@
+:root {
+  --bg: #f8fafc;           /* page background */
+  --panel: #ffffff;       /* header / sidebar */
+  --card: #ffffff;        /* cards */
+
+  --primary: #2563eb;     /* blue */
+  --success: #16a34a;     /* green */
+  --danger: #dc2626;      /* red */
+  --warning: #ca8a04;     /* yellow */
+
+  --text: #0f172a;        /* main text */
+  --muted: #64748b;       /* secondary text */
+
+  --border: #e5e7eb;
+  --radius: 14px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}

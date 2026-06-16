@@ -1,0 +1,178 @@
+/* =====================================
+   COMPACT ORG CHART – ZOOM & PAN FRIENDLY
+   ===================================== */
+
+.orgchart-page {
+  padding: 8px;
+  background: #f8fafc;
+  text-align: center;
+  height: calc(100vh - 80px);
+  overflow: hidden; /* page fixed, canvas move karega */
+}
+
+/* Zoom canvas */
+.react-transform-wrapper,
+.react-transform-component {
+  width: 100%;
+  height: 100%;
+  overflow: visible; /* 🔥 IMPORTANT */
+}
+
+/* SMALL NODE */
+.org-node-box {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 6px 8px;
+  min-width: 90px;
+  max-width: 110px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-top: 2px solid #2563eb;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.org-node-box:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* AVATAR */
+.org-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+  margin-bottom: 4px;
+}
+
+/* TEXT */
+.org-name {
+  font-size: 10px;
+  font-weight: 600;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90px;
+}
+
+.org-role {
+  font-size: 9px;
+  color: #475569;
+}
+
+/* TIGHT TREE SPACING */
+.react-organizational-chart-node {
+  padding: 0 6px !important;
+}
+
+.react-organizational-chart-line {
+  stroke-width: 1px !important;
+}
+/* FIX EXTRA LEFT SPACE */
+.orgchart-canvas {
+  display: inline-block;     /* 🔥 important */
+  transform: translateX(-20%); /* 👈 adjust: -10% / -15% / -20% */
+}
+/* Give breathing space at top so root node is not cut */
+.orgchart-canvas {
+  display: inline-block;
+  padding-top: 40px; /* 🔥 KEY FIX */
+}
+
+/* PAGE */
+.orgchart-page {
+  padding: 8px;
+  background: #f8fafc;
+  height: calc(100vh - 64px);
+  overflow: hidden; /* page static */
+}
+
+/* ZOOM WRAPPER – ALLOW FREE MOVEMENT */
+.react-transform-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 🔥 KEY: component MUST allow overflow */
+.react-transform-component {
+  overflow: visible !important;
+}
+
+/* CANVAS */
+.orgchart-canvas {
+  display: inline-block;
+  padding: 48px 64px; /* breathing room */
+}
+
+/* NODE */
+.org-node-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 8px;
+  min-width: 90px;
+  max-width: 110px;
+  cursor: grab;
+  user-select: none;
+}
+/* PAGE WRAPPER */
+.orgchart-page {
+  padding: 8px;
+  background: #f8fafc;
+  width: 100%;
+  height: calc(100vh - 60px); /* navbar height */
+  overflow: hidden;
+  position: relative;
+}
+/* Zoom wrapper should own the viewport */
+.react-transform-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🔑 THIS IS THE MOST IMPORTANT LINE */
+.react-transform-component {
+  width: fit-content;
+  height: fit-content;
+  overflow: visible !important;
+}
+.orgchart-canvas {
+  display: inline-block;
+  padding: 80px 120px; /* 🔥 BIG SPACE = FREE MOVEMENT */
+}
+/* ===============================
+   ORG CHART CONTROLS
+   =============================== */
+
+.orgchart-controls {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100;
+}
+
+.orgchart-controls button {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.orgchart-controls button:hover {
+  background: #f1f5f9;
+}
